@@ -2,14 +2,14 @@
   "name": "udagram-api",
   "version": "2.0.0",
   "description": "",
-  "main": "src/server.js",
+  "main": "server.js",
   "scripts": {
     "start": "node .",
     "tsc": "tsc",
     "dev": "ts-node-dev --respawn --transpileOnly ./src/server.ts",
     "prod": "tsc && node ./www/server.js",
     "clean": "rm -rf www/ || true",
-    "build": "npm run clean && cp -rf client/ www/client && cp -rf node_modules www/node_modules && cp -rf public/ www/public && cp config.js contacts.js server.js package.json www",
+    "build": "npm run clean && tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json",
     "zip": "npm run build && cd www && zip -r -D ../app.zip *",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -48,5 +48,8 @@
     "mocha": "^6.1.4",
     "ts-node-dev": "^1.0.0-pre.32",
     "typescript": "^3.3.4000"
+  },
+  "engines" : { 
+    "node" : "16.13.1"
   }
 }
