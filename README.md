@@ -13,7 +13,7 @@ The project can run but is missing some information to connect to the database a
 
 ### Dependencies
 
-[a relative link](.docs/dependencies.md)
+[You can find them here](https://github.com/ranabadr/udagram/docs/dependencies.md)
 
 ### Installation
 
