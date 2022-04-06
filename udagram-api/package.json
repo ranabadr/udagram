@@ -11,7 +11,8 @@
     "clean": "rm -rf www/ || true",
     "build": "npm run clean && tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json",
     "zip": "npm run build && cd www && zip -r -D ../app.zip *",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "env": "eb setenv POSTGRES_HOST=udagram.cjht7ox14edl.us-east-1.rds.amazonaws.com POSTGRES_PORT=5432 PORT=3000 POSTGRES_PASSWORD=postgres POSTGRES_USERNAME=postgres POSTGRES_DB=postgres AWS_REGION=us-east-1 AWS_PROFILE=default AWS_BUCKET=myudagram"
   },
   "keywords": [],
   "author": "Gabriel Ruttner",
