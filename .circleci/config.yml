@@ -38,7 +38,10 @@ jobs:
           name: Front-End Test
           command: |
             npm run frontend:test
-filters:
-  branches:
-    only:
-      - master
+workflows:
+  build-deploy:
+    jobs:
+      - build: 
+          filters:
+            branches:
+              only: master
