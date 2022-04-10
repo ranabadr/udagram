@@ -1,0 +1,1 @@
+eb setenv POSTGRES_HOST=udagram.cjht7ox14edl.us-east-1.rds.amazonaws.com POSTGRES_PORT=5432 PORT=3000 POSTGRES_PASSWORD=postgres POSTGRES_USERNAME=postgres POSTGRES_DB=postgres AWS_REGION=us-east-1 AWS_PROFILE=default AWS_BUCKET=myudagram URL=http://myudagram.s3-website-us-east-1.amazonaws.com JWT_SECRET=mysecret
